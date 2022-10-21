@@ -1,0 +1,105 @@
+html{
+    height: 100%;
+}
+body {
+    min-width: 650px;
+    background-size: auto;
+    overflow: hidden;
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /* width: 100%; 会导致其他元素变形 */
+    height: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* ---------- 日历部分 ---------- */
+#calendar {
+    border-bottom: 3px black solid;
+    width: 500px;
+    margin: auto;
+
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgba(129, 129, 129, 0);
+    box-sizing: border-box;
+    width: 30px;
+    height: 25px;
+}
+
+button>img {
+    width: 18px;
+    height: 15px;
+}
+
+.adjustment>div {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#month {
+    width: 320px;
+    float: left;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.everyday {
+    width: 70px;
+    float: left;
+    font-weight: bold;
+}
+
+
+/* ---------- 顶部MEMO字样 ---------- */
+.memo_head {
+    background-color: dimgrey;
+    height: 60px;
+    /* font-size: 40px;
+    font-weight: bold; */
+    margin-top: 20px;
+    margin-bottom: 100px;
+    /* line-height: 60px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.memo_head h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.memo_head button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: dimgrey;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+/* 菜单栏图标 */
+.menu-icon {
+    width: 30px;
+    height: 5px;
+    border-top: 5px solid red;
+    border-bottom: 5px solid lightgreen;
+    background-color: orange;
+    padding: 5px 0px;
+    background-clip: content-box;
+}

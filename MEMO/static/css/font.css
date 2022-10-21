@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "DanceToday-JRdzM";
+    src: url("/static/font/dance-today-font/DanceToday-JRdzM.otf");
+}
+
+@font-face {
+    font-family: "阿里妈妈数黑体";
+    src: url("/static/font/阿里妈妈数黑体/Alimama_ShuHeiTi_Bold.ttf");
+    src: url("/static/font/阿里妈妈数黑体/Alimama_ShuHeiTi_Bold.woff");
+    src: url("/static/font/阿里妈妈数黑体/Alimama_ShuHeiTi_Bold.woff2")
+}

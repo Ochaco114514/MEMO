@@ -1,0 +1,111 @@
+/* ---------- 悬浮窗口 ---------- */
+.shadow_css {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.window_css {
+    /* 使元素一开始隐藏 display:none，点击指定元素后显示 */
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 32%;
+    width: 36%;
+    height: 60%;
+    z-index: 11;
+    border-radius: 10px;
+    box-shadow: 0 0 30px 10px rgb(129, 129, 129);
+    background-color: aliceblue;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* 关闭按钮 */
+.close_floating_window {
+    position: absolute;
+    top: 0%;
+    right: 15px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(129, 129, 129);
+}
+
+/* 创建按钮 */
+.update_task {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 75px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    background-color: #BBAA9C;
+    color: aliceblue;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* 任务详情 */
+.task_details {
+    width: 84%;
+    height: 55%;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    box-sizing: border-box;
+    padding: 5px 5px;
+}
+
+.floatingWindow_title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 3px;
+}
+
+.index {
+    margin-left: 10px;
+    font-size: 10px;
+    display: none;
+}
+
+.task_name {
+    width: 100%;
+    height: 10%;
+    margin: 3px;
+}
+
+.task_content {
+    width: 90%;
+    height: 65%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-left: 4px;
+    resize: none;
+}
+
+/* 任务时间 */
+.task_time {
+    width: 84%;
+    height: 25%;
+    position: absolute;
+    top: 63%;
+    left: 8%;
+    box-sizing: border-box;
+    padding: 5px 5px;
+}
+
+.floatingWindow_time {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 时间选择器 */
+.timepicker {
+    margin: 5px;
+}

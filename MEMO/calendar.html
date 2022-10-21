@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="icon" href="/static/images/calendar_icon.png">
+    <link rel="stylesheet" href="/static/css/calendar.css" />
+    <link rel="stylesheet" href="/static/css/sidenav.css">
+    <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body onload="showDate();" background='/static/images/home_background.png'>
+
+    <div class="container">
+        <!--侧栏界面设计-->
+        <div id="mySidenav" class="sidenav">
+            <div class="close">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/home2.png" alt="主页">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/calendar2.png" alt="日历">
+                <a href="calendar.html">Calendar</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/new.png" alt="新建">
+                <a href="create.html">Create</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/contact.png" alt="联系">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="row" id="main">
+            <div class="memo_head">
+                <button>
+                    <a href=""></a>
+                    <!-- 菜单栏图标 -->
+                    <span style="font-family:Comic Sans MS;font-size:14px;">
+                        <div class="menu-icon" style="cursor: pointer" onclick="openNav()"></div>
+                    </span>
+                </button>
+                <h2>MEMO</h2>
+            </div>
+
+            <div id="calendar" class="adjustment">
+                <div class="adjustment">
+                    <button onclick="lastMonth();">
+                        <img src="/static/images/left.png" />
+                    </button>
+                    <span id="dqrq" style="font-size: 20px; font-weight: bold;"></span>
+                    <button onclick="nextMonth();">
+                        <img src="/static/images/right.png" />
+                    </button>
+                </div>
+                <div class="adjustment">
+                    <div class="everyday">日</div>
+                    <div class="everyday">一</div>
+                    <div class="everyday">二</div>
+                    <div class="everyday">三</div>
+                    <div class="everyday">四</div>
+                    <div class="everyday">五</div>
+                    <div class="everyday">六</div>
+                </div>
+                <div id="day" class="adjustment"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/calendar.js"></script>
+    <script src="/static/js/sidenav.js"></script>
+
+</body>
+
+</html>

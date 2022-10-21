@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="icon" href="/static/images/memo_icon.png">
+    <link rel="stylesheet" href="/static/css/create_blank.css">
+    <link rel="stylesheet" href="/static/css/sidenav.css">
+    <link rel="stylesheet" href="/static/css/floatingWindow.css">
+    <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script>
+    <!-- <link rel="stylesheet" href="/static/three_party/bootstrap-5.1.3-dist/css/bootstrap.min.css"> -->
+    <!-- 暂未使用 -->
+    <!-- <script src="/static/three_party/bootstrap-5.1.3-dist/js/bootstrap.min.js"></script> -->
+
+</head>
+
+<body background="/static/images/background.jpg">
+    <div class="container">
+
+        <!--侧栏界面设计-->
+        <div id="mySidenav" class="sidenav">
+            <div class="close">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/home2.png" alt="主页">
+                <a href="home.html">Home</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/calendar2.png" alt="日历">
+                <a href="calendar.html">Calendar</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/new.png" alt="新建">
+                <a href="create.html">Create</a>
+            </div>
+            <div class="navcontent">
+                <img src="/static/images/contact.png" alt="联系">
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="row" id="main">
+            <div class="memo_head">
+                <button>
+                    <a href=""></a>
+                    <!-- 菜单栏图标 -->
+                    <span style="font-family:Comic Sans MS;font-size:14px;">
+                        <div class="menu-icon" style="cursor: pointer" onclick="openNav()"></div>
+                    </span>
+                </button>
+                <h2>MEMO</h2>
+            </div>
+            <div class="create">
+                <input type="text" placeholder="Create a new task here">
+                <button>Create</button>
+                <div class="time">
+                    <img src="/static/images/Time management.png" alt="时间图标">
+                    <span id="date"></span>
+                </div>
+
+            </div>
+
+            <div class="title">
+                <div class="todo">
+                    <h3>Todo</h3>
+                </div>
+                <div class="done">
+                    <h3>Finished</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 悬浮窗口 -->
+        <div id="window" class="window_css">
+            <a href="javascript:void(0)" class="close_floating_window" onclick="hideWindow()">
+                ×
+            </a>
+            <!-- 任务 -->
+            <div class="task_details">
+                <div class="floatingWindow_title">Task Title<span class="index"></span></div>
+                <div class="task_name">
+                    <input type="text">
+                </div>
+                <div class="floatingWindow_title">Task Content</div>
+                <textarea class="task_content" name="" id="task_content" cols="" rows=""
+                    placeholder="Please enter the task content here"></textarea>
+            </div>
+            <!-- 时间控件 -->
+            <div class="task_time">
+                <div class="floatingWindow_time">• Start</div>
+                <div class="start">
+                    <input class="timepicker" type="datetime-local"/>
+                </div>
+                <div class="floatingWindow_time">• End</div>
+                <div class="finish">
+                    <input class="timepicker" type="datetime-local"/>
+                </div>
+            </div>
+            <!-- 确认按钮 -->
+            <div>
+                <button class="update_task">Update</button>
+            </div>
+        </div>
+        <!-- 出现悬浮窗口后,背景变暗 -->
+        <div id="shadow" class="shadow_css"></div>
+    </div>
+
+    <script src="/static/js/create.js"></script>
+    <script src="/static/js/sidenav.js"></script>
+    <script src="/static/js/floatingWindow.js"></script>
+</body>
+
+</html>

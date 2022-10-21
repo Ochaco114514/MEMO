@@ -1,0 +1,204 @@
+body {
+    min-width: 750px;
+    background-size: auto;
+    overflow: hidden;
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    /* width: 100%; MEMO字样会移位  */
+    height: 100%;
+    /* position: fixed; 阴影会有边框 */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* ---------- 顶部MEMO字样 ---------- */
+.memo_head {
+    background-color: dimgrey;
+    height: 60px;
+    /* font-size: 40px;
+    font-weight: bold; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* line-height: 60px; */
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.memo_head h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.memo_head button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: dimgrey;
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+/* ---------- 菜单栏图标 ---------- */
+.menu-icon {
+    width: 30px;
+    height: 5px;
+    border-top: 5px solid red;
+    border-bottom: 5px solid lightgreen;
+    background-color: orange;
+    padding: 5px 0px;
+    background-clip: content-box;
+}
+
+/* ---------- 创建任务部分 ---------- */
+.create {
+    display: flex;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+.create input {
+    width: 37%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 5px;
+    display: flex;
+    margin-right: 10px;
+}
+
+.create button {
+    width: 12%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding: 5px;
+    margin-right: 15%;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/* ---------- 实时时间显示部分 ---------- */
+.time {
+    width: 35%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.time>img {
+    height: 40px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#date {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* ---------- Todo和Finished字样 ---------- */
+.title {
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.todo>h3 {
+    margin: 0px;
+    background-color: red;
+    width: 100%;
+    height: 48px;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.done>h3 {
+    margin: 0px;
+    background-color: yellowgreen;
+    width: 100%;
+    height: 48px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.todo {
+    width: 50%;
+    height: 100%;
+}
+
+.done {
+    width: 50%;
+    height: 100%;
+}
+
+/* ---------- 新建任务 ---------- */
+.newtask {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: 3px;
+}
+
+.tag {
+    width: 5px;
+    height: 50px;
+    background-color: red;
+}
+
+.newtask input {
+    width: 10%;
+    margin: 0px;
+}
+
+.taskName {
+    width: 50%;
+    font-size: 15px;
+}
+
+.taskDate {
+    width: 22%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ---------- 删除按钮使用图片表示 ---------- */
+.newtask button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(129, 129, 129, 0);
+    border: none;
+}
+
+.trashIcon {
+    width: 30px;
+    height: 30px;
+}

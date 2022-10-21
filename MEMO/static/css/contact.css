@@ -1,0 +1,60 @@
+.memo_head {
+    background-color: rgba(255, 255, 255, 0);
+    width: 50px;
+    height: 60px;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.memo_head button {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+/* ---------- 菜单栏图标 ---------- */
+.menu-icon {
+    width: 30px;
+    height: 5px;
+    border-top: 5px solid red;
+    border-bottom: 5px solid lightgreen;
+    background-color: orange;
+    padding: 5px 0px;
+    background-clip: content-box;
+}
+
+.detail{
+    position: absolute;
+    left: 20%;
+    top: 10%;
+}
+
+.state{
+    font-family: "DanceToday-JRdzM";
+    font-size: 95px;
+    font-weight: bold;
+}
+
+.state_detail{
+    font-family: "阿里妈妈数黑体";
+    font-size: 35px;
+}
+
+
+footer{
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 20px;
+    padding: 10px 20px 10px 10px;
+    position: absolute;
+    bottom: 5%;
+}
