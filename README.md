@@ -27,7 +27,7 @@
 以下是部分效果图：
 
 * 主页
-  ![QQ图片20221021194003](README.assets\QQ图片20221021194003.png)
+  <img src="README.assets\QQ图片20221021194003.png">
 
 * 日历页
   ![QQ图片20221021194723](README.assets\QQ图片20221021194723.png)
