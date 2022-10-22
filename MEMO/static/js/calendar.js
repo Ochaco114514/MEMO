@@ -23,7 +23,6 @@ function count() {
 function showMonth() {
     let year_month = year + "年" + month + "月" + day + "日";
     document.getElementById("dqrq").innerHTML = year_month;
-    // document.getElementById("dqrq").style.fontWeight = bold;
 }
 
 //  ----------- 输出日历  ----------- 
@@ -31,9 +30,7 @@ function showDate() {
     showMonth();
     count();
     let firstdate = new Date(year, month - 1, 1); // 获取对应year、month的第一天
-    // console.log(firstdate); //调试
     let xq = firstdate.getDay();  //获取对应的星期
-    // console.log(xq); //调试
     let daterow = document.getElementById("day");
     daterow.innerHTML = "";
     if (xq != 0) {
@@ -56,40 +53,6 @@ function showDate() {
         let newPage;
         // localStorage.clear();
         dayElement.onclick = function () {
-            // 向服务器发送点击的日期
-            // $.ajax({
-            //     url: "http://192.168.191.26:5000/todo/tasks/getlist" + "/year=" + year.toString() + "/month=" + month.toString() + "/day=" + j.toString(),
-            //     type: "GET",
-            //     dataType: "json",
-            //     contentType: "application/json",
-            //     data: JSON.stringify({
-            //         "year": year,
-            //         "month": month,
-            //         "day": j,
-            //     }),
-            //     success: function (resp) {
-            //         console.log("get successfully");
-            //         console.log(resp);
-            //     },
-            // });
-
-            // $.ajax({
-            //     url: "http://192.168.191.26:5000/todo/tasks/add",
-            //     type: "POST",
-            //     dataType: "json",
-            //     contentType: "application/json", // 要写
-            //     data: JSON.stringify({
-            //         "year": year,
-            //         "month": month,
-            //         "day": j,
-            //         "title": "test_post",
-            //     }),
-            //     success: function (resp) {
-            //         console.log("post successfully");
-            //         console.log(resp);
-            //     },
-            // });
-
             localStorage.setItem("year", year);
             localStorage.setItem("month", month);
             localStorage.setItem("day", j);
