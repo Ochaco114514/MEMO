@@ -17,9 +17,6 @@ let showdate = document.getElementById('date');
 let year = localStorage.getItem("year");
 let month = localStorage.getItem("month");
 let day = localStorage.getItem("day");
-// console.log(`${year}`);
-// console.log(`${month}`);
-// console.log(`${day}`);
 
 setInterval(function () {
     let res = year + "-" + addzero(month) + "-" + addzero(day);
@@ -30,12 +27,6 @@ setInterval(function () {
 // ---------- 日期判断 ----------
 function judge(year, month, day) { //页面日期小于当前日期，返回0；否则返回1
     let time = new Date();
-    // console.log(`${year}`);
-    // console.log(`${month}`);
-    // console.log(`${day}`);
-    // console.log(`${time.getFullYear()}`);
-    // console.log(`${time.getMonth() + 1}`);
-    // console.log(`${time.getDate()}`);
     if (year < time.getFullYear()) return 0;
     if (year == time.getFullYear() && month < (time.getMonth() + 1)) return 0;
     if (year == time.getFullYear() && month == (time.getMonth() + 1) && day < time.getDate()) return 0;
@@ -44,7 +35,6 @@ function judge(year, month, day) { //页面日期小于当前日期，返回0；
 };
 
 //如果页面日期小于当前日期，则不显示创建按钮及输入框
-// console.log(`${judge(year, month, day)}`);
 if (judge(year, month, day) === 0) {
     let create_input = document.querySelector('.create input');
     let create_button = document.querySelector('.create button');
@@ -92,7 +82,6 @@ addTaskButton.onclick = function () {
     trashIcon.className = 'trashIcon';
     trashIcon.src = "/static/images/trash_icon1.png";
     deleteButton.appendChild(trashIcon);
-    // deleteButton.innerHTML = 'delete';
     let date = document.createElement('span');
     date.className = 'taskDate';
     date.style.color = 'red';
@@ -126,7 +115,6 @@ addTaskButton.onclick = function () {
         }),
         success: function (resp) {
             console.log("add successfully");
-            console.log(resp);
             window.location.reload(); //创建成功，刷新页面，获取id
         },
     });
@@ -179,21 +167,7 @@ $(function () {
             "day": day,
         }),
         success: function (resp) {
-            //测试开始
             console.log("get successfully");
-            console.log(resp);
-            // console.log(resp.data);
-            // console.log(resp.data[0]);
-            // console.log(resp.data[0].title);
-            // console.log(resp.data.title);  // 上面的正常输出，但这个是undefined
-
-            // console.log(resp.data.length);
-            // console.log(`${resp.data[0].year}`);
-            // console.log(`${addzero(resp.data[0].month)}`);
-            // console.log(resp.data[0].start[0] + resp.data[0].start[1]);
-            // console.log(resp.data[0].finish);
-            //测试结束
-
 
             // ---------- 将收到的数据渲染到页面上 ----------
 
@@ -264,7 +238,6 @@ $(function () {
                 task_record.appendChild(check_record);
                 task_record.appendChild(content_record);
                 task_record.appendChild(date_record);
-                // task_record.appendChild(index_record);
                 task_record.appendChild(deleteButton_record);
                 if (resp.data[k].done) {  // 任务完成
                     let state_record = document.querySelector('.done');
@@ -298,7 +271,6 @@ $(function () {
                     }
                     //通知服务器修改done
                     let id = parseInt(check_record.id);
-                    console.log(`${id}`);
                     $.ajax({
                         url: "http://192.168.191.26:5000/todo/tasks/update",
                         type: "POST",
@@ -310,7 +282,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("check successfully");
-                            console.log(resp);
                         },
                     });
                 }
@@ -329,7 +300,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("delete successfully");
-                            console.log(resp);
                             // 要删除的是task这个元素，它可能在todo里，也可能在done里
                             // 直接通过parentNode属性获得其父元素
                             let parent_record = task_record.parentNode;
@@ -349,13 +319,6 @@ $(function () {
                     let update_finish = document.querySelector('.finish input').value;
                     // let update_done = check_record.checked;
                     let id = parseInt(document.querySelector('.index').innerHTML);
-                    console.log("调试信息：");
-                    console.log(`title: ${update_title}`);
-                    console.log(`content: ${update_content}`);
-                    console.log(`start: ${update_start}`);
-                    console.log(`finish: ${update_finish}`);
-                    console.log(`id: ${id}`);
-                    console.log("------------");
                     $.ajax({
                         url: "http://192.168.191.26:5000/todo/tasks/update",
                         type: "POST",
@@ -373,7 +336,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("update successfully");
-                            console.log(resp);
                             //修改完成后刷新页面
                             window.location.reload();
                         },
