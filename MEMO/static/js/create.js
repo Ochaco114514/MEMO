@@ -153,22 +153,8 @@ $(function () {
             "day": day,
         }),
         success: function (resp) {
-            //测试开始
             console.log("get successfully");
-            console.log(resp);
-            // console.log(resp.data);
-            // console.log(resp.data[0]);
-            // console.log(resp.data[0].title);
-            // console.log(resp.data.title);  // 上面的正常输出，但这个是undefined
-
-            // console.log(resp.data.length);
-            // console.log(`${resp.data[0].year}`);
-            // console.log(`${addzero(resp.data[0].month)}`);
-            // console.log(resp.data[0].start[0] + resp.data[0].start[1]);
-            // console.log(resp.data[0].finish);
-            //测试结束
-
-
+   
             // ---------- 将收到的数据渲染到页面上 ----------
 
             for (let k = 0; k < resp.data.length; k++) {
@@ -272,7 +258,6 @@ $(function () {
                     }
                     //通知服务器修改done
                     let id = parseInt(check_record.id);
-                    console.log(`${id}`);
                     $.ajax({
                         url: "http://192.168.191.26:5000/todo/tasks/update",
                         type: "POST",
@@ -284,7 +269,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("check successfully");
-                            console.log(resp);
                         },
                     });
                 }
@@ -303,7 +287,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("delete successfully");
-                            console.log(resp);
                             // 要删除的是task这个元素，它可能在todo里，也可能在done里
                             // 直接通过parentNode属性获得其父元素
                             let parent_record = task_record.parentNode;
@@ -323,19 +306,12 @@ $(function () {
                     let update_finish = document.querySelector('.finish input').value;
                     // let update_done = check_record.checked;
                     let id = parseInt(document.querySelector('.index').innerHTML);
-                    console.log("调试信息：");
-                    console.log(`title: ${update_title}`);
-                    console.log(`content: ${update_content}`);
-                    console.log(`start: ${update_start}`);
-                    console.log(`finish: ${update_finish}`);
-                    console.log(`id: ${id}`);
-                    console.log("------------");
+                    
                     if (update_start > update_finish) {
                         alert("Start time should be less than end time.");
                         return;
                     }
                     if (update_start == "" || update_finish == "") {
-                        console.log('exit');
                         alert("Start and end time are both required.");
                         return;
                     }
@@ -356,7 +332,6 @@ $(function () {
                         }),
                         success: function (resp) {
                             console.log("update successfully");
-                            console.log(resp);
                             //修改完成后刷新页面
                             window.location.reload();
                         },
